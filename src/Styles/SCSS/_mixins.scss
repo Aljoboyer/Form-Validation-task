@@ -1,0 +1,12 @@
+@import './Variables';
+
+@mixin ButtonStyle {
+    background-color: $BtnColor;
+    color: white;
+    font-size: $RegularFontSize;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding: 10px 70px 10px 70px;
+    cursor: pointer;
+}

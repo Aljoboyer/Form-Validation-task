@@ -1,0 +1,87 @@
+@import './Variables';
+@import './mixins';
+@import './Home';
+
+.Login{ 
+    display: grid; 
+    grid-template-columns: repeat(2, 1fr);
+    height: 100vh;
+    background-color: #f8f9fd;
+    padding: 20px;
+    
+    .Login__ImageDiv{
+        padding-top: 80px;
+        height: 84vh;
+        background-color: #fafbff; 
+        text-align: center;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        .Login__ImageDiv--image{
+            width: 80%;
+            height: 400px;
+        }
+        .Login__ImageDiv__TextDiv{
+            
+            h4 {
+                color: $TitleColor;
+                font-size: $TitleFont;
+                font-family: $TitleFontFamily;
+                margin-bottom: 0px;
+            }
+            p{
+                color: $TextColor;
+                font-size: 15px;
+            }
+        }
+    }
+    .Login__LoginForm{
+        background-color: white;
+        padding-left: 80px;
+        height: 95vh;
+        border-bottom-right-radius: 10px;
+        border-top-right-radius: 10px;
+        .Login__LoginForm__title{
+            color: $TitleColor;
+            font-size: $TitleFont;
+            font-family: $TitleFontFamily;
+        }
+        .Login__LoginForm--form__label{
+            display: block;
+            color: $TextColor;
+            font-size: $RegularFontSize;
+            padding-bottom: 7px;
+        }
+        .Login__LoginForm--form__input{
+            display: block;
+            margin-bottom: 15px;
+            height: 40px;
+            width: 60%;
+            border: 1px solid rgb(185, 184, 184);
+            border-radius: 5px;
+            &:focus{
+                outline: 1px solid rgb(105, 103, 103);
+                border-radius: 5px;
+            }
+        }
+        .Login__LoginForm--form__input__phone{
+            display: block;
+            margin-bottom: 15px;
+            height: 40px;
+            width: 40%;
+            border-radius: 5px;
+            border: 1px solid rgb(185, 184, 184);
+            &:focus{
+                outline: 1px solid rgb(105, 103, 103);
+                border-radius: 5px;
+            }
+        }
+        .Login__LoginForm--btn{
+            @include ButtonStyle
+        } 
+        .Login_LoginForm--Error{
+            color: red;
+            font-size: 14px;
+            font-weight: 500; 
+        }
+    } 
+}  

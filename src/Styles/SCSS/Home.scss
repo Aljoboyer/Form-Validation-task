@@ -1,0 +1,17 @@
+@import './Variables';
+@import './mixins';
+
+.Home{
+    display: flex;
+    justify-content: center;
+    .Home_HomeTitle{
+        color: $TitleColor;
+        font-size: 60px;
+        font-weight: bold;
+        text-align: center
+    }
+    .Home_Homebtn{
+        @include ButtonStyle;
+        margin-bottom: 20px
+    }
+}
